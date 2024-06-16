@@ -3,6 +3,17 @@
 
 ### Reference Documentation
 
+### The tutorial series includes some changes below:
+
+### - Spring Boot 3
+### - Integration Tests using Latest Testing Techniques
+### - Spring Cloud Feign for inter service communication
+### - API Gateway implementation using Spring Cloud Gateway MVC instead of Spring Cloud Gateway with Webflux
+### - Add Circuit Breaker Logic in API Gateway
+### - Security using latest Keycloak
+### - Distributed Tracing using Grafana Stack instead of Slueth
+### - Deployment using Kubernetes
+
 ## * We are going to use Grafana Stack to implement Observability
 
 ### * Grafana

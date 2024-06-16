@@ -11,23 +11,23 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
-@RequiredArgsConstructor
+
 public class ProductService {
     //@Autowired
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     private final Logger logger= LoggerFactory.getLogger(ProductService.class);
 
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
+
     public void createProduct(ProductRequest productRequest) {
-        /*Product product = Product.builder()
-                .name(productRequest.getName())
-                .description(productRequest.getDescription())
-                .price(productRequest.getPrice())
-                .build();*/
+        logger.info("Creating Product Product Request:: {}", productRequest);
         Product product= AppUtils.dto2modelpro(productRequest);
+        logger.info("After AppUtils :: {}",product);
         productRepository.save(product);
         logger.info("Product {} :: {} is saved", product.getId(),product.getName());
     }
@@ -35,7 +35,7 @@ public class ProductService {
     public List<ProductResponse> getAllProducts() {
         List<Product> products = productRepository.findAll();
         logger.info("getAllProducts called >> list of products::");
-        return products.stream().map(this::mapToProductResponse).collect(Collectors.toList());
+        return products.stream().map(this::mapToProductResponse).toList();
     }
 
     private ProductResponse mapToProductResponse(Product product) {

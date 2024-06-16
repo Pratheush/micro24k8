@@ -1,113 +1,96 @@
 package com.mylearning.productservice;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mylearning.productservice.dto.ProductRequest;
-import com.mylearning.productservice.dto.ProductResponse;
 import com.mylearning.productservice.model.Product;
 import com.mylearning.productservice.repository.ProductRepository;
-import com.mylearning.productservice.service.ProductService;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.junit.jupiter.api.Assertions;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-
-import org.springframework.http.MediaType;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
-import org.springframework.test.web.servlet.ResultMatcher;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.server.LocalServerPort;
+import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
+import org.springframework.http.HttpStatus;
 import org.testcontainers.containers.MongoDBContainer;
-import org.testcontainers.junit.jupiter.Container;
-import org.testcontainers.junit.jupiter.Testcontainers;
-import org.testcontainers.utility.DockerImageName;
-
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-import static net.bytebuddy.matcher.ElementMatchers.is;
-import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.MatcherAssert.assertThat;
 
-import static org.springframework.test.web.client.match.MockRestRequestMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-
-@SpringBootTest
-@Testcontainers     // using this junit understands that we are going to use testcontainers to run this particular test
-@AutoConfigureMockMvc // use this annotation to autoconfigure MockMvc
+//@ActiveProfiles("test")
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class ProductServiceApplicationTests {
 
-    // defining the mongodb container inside our tests
-    @Container // this annotation tells junit that this is a mongodb  container
-    static final MongoDBContainer mongoDBContainer = new MongoDBContainer(DockerImageName.parse("mongo:4.4.10-focal"));
+    @ServiceConnection
+    static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:7.0.7");
+    @LocalServerPort
+    private Integer port;
 
-    @Autowired
-    private MockMvc mockMvc;
-    @Autowired
-    private ObjectMapper objectMapper;
     @Autowired
     private ProductRepository productRepository;
+    @BeforeEach
+    void setup() {
+        RestAssured.baseURI = "http://localhost";
+        RestAssured.port = port;
+        //RestAssured.defaultParser = Parser.TEXT;
+    }
 
-    @Mock
-    private ProductService productService;
+    @BeforeEach
+    public void init() {
+        productRepository.deleteAll();
 
-    // setting the uri property of mongodb container dynamically in our test properties
-    @DynamicPropertySource // this will add this property to our spring context dynamically at the time of running test
-    static void setProperties(DynamicPropertyRegistry dymDynamicPropertyRegistry) {
-        dymDynamicPropertyRegistry.add("spring.data.mongodb.uri", mongoDBContainer::getReplicaSetUrl);
+        Product product1 = new Product("1", "Product 1", "Description 1", new BigDecimal("10.00"));
+        Product product2 = new Product("2", "Product 2", "Description 2", new BigDecimal("20.00"));
+
+        productRepository.saveAll(Arrays.asList(product1, product2));
+    }
+
+    static {
+        mongoDBContainer.start();
     }
 
     @Test
     void shouldCreateProduct() throws Exception {
-        ProductRequest productRequest = getProductRequest();
-        String productRequestString = objectMapper.writeValueAsString(productRequest);
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/product")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(productRequestString))  // here we have to provide content as String
-                .andExpect(status().isCreated()); // this is status() is static coming from mockMvc result matchers
-        Assertions.assertEquals(1, productRepository.findAll().size());
+
+        ProductRequest productRequest = new ProductRequest("iPhone 13", "iPhone 13", BigDecimal.valueOf(1200));
+
+        var responseBodyString = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body(productRequest)
+                .when()
+                .post("/api/product")
+                .then()
+                .log().all()
+                .statusCode(201)
+                .extract()
+                .body().asString();
+
+        assertThat(responseBodyString, Matchers.is("Product Created Successfully"));
     }
 
-    private ProductRequest getProductRequest() {
-        return ProductRequest.builder()
-                .name("iPhone 13")
-                .description("iPhone 13")
-                .price(BigDecimal.valueOf(1200))
-                .build();
+
+    @Test
+    void getAllProducts_ShouldReturnAllProducts() {
+        RestAssured.given()
+                .contentType(ContentType.JSON)
+                .when()
+                .get("/api/product")
+                .then()
+                .log().all()
+                .statusCode(HttpStatus.OK.value())
+                .contentType(ContentType.JSON)
+                .body("$.size()", Matchers.is(2))
+                .body("[0].id", Matchers.equalTo("1"))
+                .body("[0].name", Matchers.equalTo("Product 1"))
+                .body("[0].description", Matchers.equalTo("Description 1"))
+                .body("[0].price", Matchers.equalTo(10.00f))
+                .body("[1].id", Matchers.equalTo("2"))
+                .body("[1].name", Matchers.equalTo("Product 2"))
+                .body("[1].description", Matchers.equalTo("Description 2"))
+                .body("[1].price", Matchers.equalTo(20.00f));
     }
 
-@Test
-    void shouldGetAllProducts() throws Exception {
-
-    List<ProductResponse> expected = new ArrayList<>();
-    expected.add(getProductResponse());
-
-    Mockito.when(productService.getAllProducts()).thenReturn(expected);
-
-    mockMvc.perform(MockMvcRequestBuilders.get("/api/product"))
-            .andDo(print())
-            .andExpect(status().isOk())
-            .andExpectAll(MockMvcResultMatchers.jsonPath("$", hasSize(1)));
-
-    Assertions.assertEquals(1, productRepository.findAll().size());
-    }
-    private ProductResponse getProductResponse() {
-        return ProductResponse.builder()
-                .id("1")
-               .name("iPhone 13")
-                .description("iPhone 13")
-                .price(BigDecimal.valueOf(1800))
-                .build();
-    }
 }

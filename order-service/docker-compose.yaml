@@ -1,13 +1,15 @@
 version: '4'
 services:
   mongodb:
-    image: mongo:7.0.5
-    container_name: mongodb
+    image: mysql:8.3.0
+    container_name: mysql
     ports:
-      - "27017:27017"
+      - "3306:3306"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: raj
-      MONGO_INITDB_ROOT_PASSWORD: raj123
-      MONGO_INITDB_DATABASE: productss
+      MYSQL_ROOT_PASSWORD: raj123
+      MYSQL_USER: raj
+      MYSQL_PASSWORD: raj123
+      MYSQL_DATABASE: order_service
     volumes:
-      - ./data:/data/db
+      - ./mysql:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql

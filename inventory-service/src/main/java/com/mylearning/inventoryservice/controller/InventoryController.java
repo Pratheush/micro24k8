@@ -1,19 +1,18 @@
 package com.mylearning.inventoryservice.controller;
 
-import com.mylearning.inventoryservice.dto.InventoryResponse;
 import com.mylearning.inventoryservice.service.InventoryService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/api/inventory")
-@RequiredArgsConstructor
 public class InventoryController {
 
     private final InventoryService inventoryService;
+
+    public InventoryController(InventoryService inventoryService) {
+        this.inventoryService = inventoryService;
+    }
 
     // http:'//localhost:8082/api/inventory/iphone-13,iphone13-red
 
@@ -25,11 +24,17 @@ public class InventoryController {
         return inventoryService.isInStock(skuCode);
     }*/
 
-    @GetMapping
+    /*@GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<InventoryResponse> isInStock(@RequestParam List<String> skuCode) {
 
         return inventoryService.isInStock(skuCode);
+    }*/
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public Boolean isInStock(@RequestParam String skuCode, @RequestParam Integer quantity) {
+        return inventoryService.isInStock(skuCode, quantity);
     }
 }
 
