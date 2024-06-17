@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae595e5-f700-4b14-9099-09eb690cca25" name="Changes" comment="commit untracked changes frod intelij">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d419cb4dc85bc6d5d3694ed279cc049685d18533" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/4/d419cb4dc85bc6d5d3694ed279cc049685d18533" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
     "Spring Boot.InventoryServiceApplication.executor": "Run",
     "Spring Boot.OrderServiceApplication.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
-    "git-widget-placeholder": "initial",
+    "git-widget-placeholder": "initial2",
     "jdk.selected.JAVA_MODULE": "22",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/jlab/git2024/micro24k8/my_micro_24_k8/inventory-service",
@@ -220,7 +220,7 @@
       <workItem from="1717929301158" duration="17881000" />
       <workItem from="1718241392463" duration="3328000" />
       <workItem from="1718411847787" duration="1219000" />
-      <workItem from="1718438321948" duration="51647000" />
+      <workItem from="1718438321948" duration="52999000" />
     </task>
     <task id="LOCAL-00001" summary="commit untracked changes frod intelij">
       <option name="closed" value="true" />
