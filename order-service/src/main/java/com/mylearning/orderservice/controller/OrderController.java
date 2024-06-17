@@ -31,7 +31,7 @@ public class OrderController {
     @Retry(name = UNSTABLE_PLACE_ORDER)*/
     //public CompletableFuture<String> placeOrder(@RequestBody OrderRequest orderRequest) {
     public String placeOrder(@RequestBody OrderRequest orderRequest) {
-        return orderService.placeOrder(orderRequest);
+        return orderService.placeOrder_24(orderRequest);
         //return "Order Placed Successfully";
         //return CompletableFuture.supplyAsync(() -> orderService.placeOrder(orderRequest));
     }

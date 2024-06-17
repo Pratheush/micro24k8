@@ -86,3 +86,5 @@ S
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+ƒ
+Sorder-service/src/main/java/com/mylearning/orderservice/client/InventoryClient.java,0\0\00d8c483c67e23c0883522f08fdbb3ba7f515393

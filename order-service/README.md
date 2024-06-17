@@ -35,3 +35,8 @@ CREATE TABLE `t_orders`
 PRIMARY KEY (`id`)
 );
 
+================================================================
+
+## - We will implement Synchronous Communication between Order Service and Inventory Service using the Spring Cloud OpenFeign library.
+
+

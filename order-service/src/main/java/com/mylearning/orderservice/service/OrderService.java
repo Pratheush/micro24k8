@@ -9,6 +9,7 @@ import brave.Tracer;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 import java.util.Arrays;*/
+import com.mylearning.orderservice.client.InventoryClient;
 import com.mylearning.orderservice.model.Order;
 import com.mylearning.orderservice.model.OrderLineItems;
 import com.mylearning.orderservice.repository.OrderRepository;
@@ -36,10 +37,13 @@ public class OrderService {
 
     //private String inventoryUrl="http:'//localhost:8088/api/inventory";
 
-    private String inventoryUrl="http://INVENTORY-SERVICE/api/inventory";
+    //private String inventoryUrl="http://INVENTORY-SERVICE/api/inventory";
 
-    public OrderService(OrderRepository orderRepository) {
+    private final InventoryClient inventoryClient;
+
+    public OrderService(OrderRepository orderRepository, InventoryClient inventoryClient) {
         this.orderRepository = orderRepository;
+        this.inventoryClient = inventoryClient;
     }
 
     // when we are making a call in a single thread without any creating additional threads we can trace
@@ -59,7 +63,7 @@ public class OrderService {
     //private final KafkaTemplate<String, OrderPlacedEvent> kafkaTemplate;
 
     @Transactional
-    public String placeOrder(OrderRequest orderRequest) {
+    public String placeOrder_23(OrderRequest orderRequest) {
         /*
         placeOrder(orderRequest) :: accepting orderrequest dto which contains list of OrderLineItemsDto
         to extract OrderLineItemsDto and then set OrderLineItems using builder pattern and setting it to order
@@ -124,5 +128,22 @@ public class OrderService {
     // mapping the OrderLineItemsDto to OrderLineItems
     private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemsDto) {
         return new OrderLineItems(orderLineItemsDto.id(), orderLineItemsDto.skuCode(),orderLineItemsDto.price(),orderLineItemsDto.quantity());
+    }
+
+    @Transactional
+    public String placeOrder_24(OrderRequest orderRequest) {
+        Order order = new Order();
+        order.setOrderNumber(UUID.randomUUID().toString());
+
+        List<OrderLineItems> orderLineItems = orderRequest.orderLineItemsDtoList()
+                .stream()
+                .map(this::mapToDto)
+                .collect(Collectors.toList());
+
+        order.setOrderLineItemsList(orderLineItems);
+
+        orderRepository.save(order);
+
+        return "Order Placed Successfully";
     }
 }
