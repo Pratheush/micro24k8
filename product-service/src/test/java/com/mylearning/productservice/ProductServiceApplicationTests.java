@@ -26,6 +26,7 @@ class ProductServiceApplicationTests {
 
     @ServiceConnection
     static MongoDBContainer mongoDBContainer = new MongoDBContainer("mongo:7.0.7");
+
     @LocalServerPort
     private Integer port;
 

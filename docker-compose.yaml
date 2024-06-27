@@ -1,0 +1,29 @@
+version: '4'
+services:
+  mysql_inventory:
+    image: mysql:8.3.0
+    container_name: mysql_inventory
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: raj123
+      MYSQL_USER: raj
+      MYSQL_PASSWORD: raj123
+      MYSQL_DATABASE: inventory_service
+    volumes:
+      - ./docker_db/mysql_inventory/:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  mysql_order:
+    image: mysql:8.3.0
+    container_name: mysql_order
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: raj123
+      MYSQL_USER: raj
+      MYSQL_PASSWORD: raj123
+      MYSQL_DATABASE: order_service
+    volumes:
+      - ./docker_db/mysql_order/:/var/lib/mysql
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql

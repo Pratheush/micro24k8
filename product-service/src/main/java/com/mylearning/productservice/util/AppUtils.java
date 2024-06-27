@@ -3,6 +3,7 @@ package com.mylearning.productservice.util;
 import com.mylearning.productservice.dto.ProductRequest;
 import com.mylearning.productservice.dto.ProductResponse;
 import com.mylearning.productservice.model.Product;
+import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 

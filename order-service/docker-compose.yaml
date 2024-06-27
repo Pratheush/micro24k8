@@ -1,6 +1,6 @@
 version: '4'
 services:
-  mongodb:
+  mysql:
     image: mysql:8.3.0
     container_name: mysql
     ports:
@@ -11,5 +11,5 @@ services:
       MYSQL_PASSWORD: raj123
       MYSQL_DATABASE: order_service
     volumes:
-      - ./mysql:/var/lib/mysql
-      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ../docker_db/mysql_order/:/var/lib/mysql
+      - ../docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql

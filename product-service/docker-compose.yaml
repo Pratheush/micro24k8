@@ -8,6 +8,6 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: raj
       MONGO_INITDB_ROOT_PASSWORD: raj123
-      MONGO_INITDB_DATABASE: productss
+      MONGO_INITDB_DATABASE: product-service
     volumes:
-      - ./data:/data/db
+      - ../docker_db/mongo_product/:/data/db

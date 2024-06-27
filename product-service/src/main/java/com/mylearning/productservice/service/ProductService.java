@@ -34,7 +34,7 @@ public class ProductService {
 
     public List<ProductResponse> getAllProducts() {
         List<Product> products = productRepository.findAll();
-        logger.info("getAllProducts called >> list of products::");
+        logger.info("getAllProducts called >> list of products:: {}", products);
         return products.stream().map(this::mapToProductResponse).toList();
     }
 

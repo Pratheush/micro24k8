@@ -8,6 +8,8 @@ target/
 product-service/data
 order-service/mysql
 inventory-service/mysql
+docker_db/
+
 
 ### target ####
 product-service/target

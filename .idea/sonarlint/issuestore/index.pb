@@ -25,8 +25,6 @@ Tproduct-service/src/main/java/com/mylearning/productservice/dto/ProductResponse
 Nproduct-service/src/main/java/com/mylearning/productservice/util/AppUtils.java,c\c\cce55e00438d14b5e139ce1df48c234dc42675a7
 E
 order-service/pom.xml,d\3\d3bf53ecc442740843266a635cbfe9807b992566
-É
-Sorder-service/src/main/java/com/mylearning/orderservice/config/WebClientConfig.java,d\4\d419cb4dc85bc6d5d3694ed279cc049685d18533
 S
 #product-service/docker-compose.yaml,d\a\da58bc919d7a6fa549222dd4a01c2bcb1d84fa3d
 Q
@@ -38,8 +36,6 @@ Sorder-service/src/main/java/com/mylearning/orderservice/event/OrderPlacedEvent.
 x
 Horder-service/src/main/java/com/mylearning/orderservice/model/Order.java,e\6\e670ae12881920e1798d3aa8effd487ae29d3760
 Å
-Qorder-service/src/main/java/com/mylearning/orderservice/model/OrderLineItems.java,a\f\afda20d3b76d0f640833a1a1149c0d7aec2075f6
-Å
 Qorder-service/src/main/java/com/mylearning/orderservice/service/OrderService.java,a\6\a6535f9ea89d3294779211dd3e0fe50124e1fbd4
 }
 Morder-service/src/main/java/com/mylearning/orderservice/dto/OrderRequest.java,8\e\8e166965c5dba40cc5f09453a391cb457a3ca883
@@ -47,8 +43,6 @@ G
 order-service/README.md,d\9\d98d00bea0bc75db86b40c82376ebd33718a9093
 á
 Worder-service/src/main/java/com/mylearning/orderservice/repository/OrderRepository.java,9\5\95c0d4ffc16f651a2351ceadfff519d49f559969
-Ç
-Rorder-service/src/main/java/com/mylearning/orderservice/dto/OrderLineItemsDto.java,a\e\ae3755b290127451003cbffdb43a1de9c2920b40
 Ç
 Rorder-service/src/main/java/com/mylearning/orderservice/dto/InventoryResponse.java,3\7\37677b5e3fabf31658b1ed24c1ffc5bfa9095b41
 á
@@ -61,8 +55,6 @@ I
 inventory-service/pom.xml,e\3\e347da292c40d252c508703eddff460d1f378f1c
 ì
 cinventory-service/src/main/java/com/mylearning/inventoryservice/controller/InventoryController.java,0\3\030053515182b6e906b8d86bd6cc31feff86d353
-W
-'inventory-service/docker/mysql/init.sql,9\c\9ceec9ba7dbe0cf7c91ebccb3bd08f7648a78cd9
 K
 inventory-service/README.md,f\9\f92dd61a8d88587b3f04771fcc353696bfdf7473
 Ñ
@@ -88,3 +80,9 @@ S
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 É
 Sorder-service/src/main/java/com/mylearning/orderservice/client/InventoryClient.java,0\0\00d8c483c67e23c0883522f08fdbb3ba7f515393
+C
+docker-compose.yaml,e\f\ef8def03dc8f162799089e9b5f4321201c8810d5
+Ä
+Porder-service/src/main/java/com/mylearning/orderservice/stub/InventoryStubs.java,e\d\edad9bf226b88d4e3efc8e63ebc86734897460f3
+è
+_order-service/src/main/java/com/mylearning/orderservice/exception/ProductNotFoundException.java,3\a\3ad1fe4a89b18d8ecdaf24d2b099cf219e188226
