@@ -98,3 +98,11 @@ E
 api-gateway/README.md,8\7\875083f4ade320faab2c0422d4a49320725dc167
 n
 >api-gateway/src/main/com/mylearning/config/SecurityConfig.java,2\e\2e8e4a88e0daa1cf88acc619fbf78c9fd5639436
+Ö
+Uproduct-service/src/main/java/com/mylearning/productservice/config/OpenAPIConfig.java,c\e\ce774a37c99ff1301b758b4330898807e6de39db
+Å
+Qorder-service/src/main/java/com/mylearning/orderservice/config/OpenAPIConfig.java,0\c\0c49a69543fe675d8b3374995e4f309d34226fac
+â
+Yinventory-service/src/main/java/com/mylearning/inventoryservice/config/OpenAPIConfig.java,8\7\874f2ceb2d9b5b5e5ddc862bee59bcb42b81c156
+Ç
+Rproduct-service/src/main/java/com/mylearning/productservice/config/CorsConfig.java,1\7\17c0b3fa24d66217052f33f5bc833479bbd2d9a4
