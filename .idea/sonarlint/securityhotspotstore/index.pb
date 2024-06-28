@@ -94,3 +94,7 @@ f
 6api-gateway/src/main/com/mylearning/routes/Routes.java,5\3\53effe5e50931923b6c05106f39b43d9f59ebf6e
 N
 api-gateway/docker-compose.yml,e\4\e48699b5e2d44dcfebe8dd2c7a85a1c4a61b8444
+E
+api-gateway/README.md,8\7\875083f4ade320faab2c0422d4a49320725dc167
+n
+>api-gateway/src/main/com/mylearning/config/SecurityConfig.java,2\e\2e8e4a88e0daa1cf88acc619fbf78c9fd5639436
