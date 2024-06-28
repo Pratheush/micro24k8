@@ -27,3 +27,15 @@ services:
     volumes:
       - ./docker_db/mysql_order/:/var/lib/mysql
       - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  mongodb:
+    image: mongo:7.0.5
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: raj
+      MONGO_INITDB_ROOT_PASSWORD: raj123
+      MONGO_INITDB_DATABASE: product-service
+    volumes:
+      - ./docker_db/mongo_product/:/data/db

@@ -86,3 +86,11 @@ C
 Porder-service/src/main/java/com/mylearning/orderservice/stub/InventoryStubs.java,e\d\edad9bf226b88d4e3efc8e63ebc86734897460f3
 
 _order-service/src/main/java/com/mylearning/orderservice/exception/ProductNotFoundException.java,3\a\3ad1fe4a89b18d8ecdaf24d2b099cf219e188226
+C
+api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73
+n
+>api-gateway/src/main/com/mylearning/ApiGatewayApplication.java,5\4\54ddd61b1f9f567ae90de825faafd53753586d3c
+f
+6api-gateway/src/main/com/mylearning/routes/Routes.java,5\3\53effe5e50931923b6c05106f39b43d9f59ebf6e
+N
+api-gateway/docker-compose.yml,e\4\e48699b5e2d44dcfebe8dd2c7a85a1c4a61b8444
