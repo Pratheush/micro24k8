@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae595e5-f700-4b14-9099-09eb690cca25" name="Changes" comment="commit untracked changes frod intelij">
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/stub/InventoryStubs.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +107,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OrderServiceApplicationTests.placeOrder_ProductNotInStock_ShouldReturnBadRequest">
+  <component name="RunManager" selected="JUnit.OrderServiceApplicationTests">
     <configuration name="InventoryServiceApplicationTests.shouldReadInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="inventory-service" />
       <extension name="coverage">
@@ -119,6 +120,21 @@
       <option name="MAIN_CLASS_NAME" value="com.mylearning.inventoryservice.InventoryServiceApplicationTests" />
       <option name="METHOD_NAME" value="shouldReadInventory" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="order-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mylearning.orderservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
+      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,22 +166,6 @@
       <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
       <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceApplicationTests" />
       <option name="METHOD_NAME" value="shouldSubmitOrderWithFalseResponseFromInventory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mylearning.orderservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceApplicationTests" />
-      <option name="METHOD_NAME" value="shouldSubmitOrderWithTrueResponseFromInventory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -207,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderServiceApplicationTests" />
         <item itemvalue="Spring Boot.InventoryServiceApplication" />
         <item itemvalue="JUnit.OrderServiceApplicationTests.placeOrder_ProductNotInStock_ShouldReturnBadRequest" />
         <item itemvalue="JUnit.InventoryServiceApplicationTests.shouldReadInventory" />
         <item itemvalue="JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithFalseResponseFromInventory" />
-        <item itemvalue="JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventory" />
       </list>
     </recent_temporary>
   </component>
