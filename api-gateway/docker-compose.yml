@@ -10,6 +10,8 @@ services:
       MYSQL_DATABASE: keycloak
       MYSQL_USER: keycloak_user
       MYSQL_PASSWORD: keycloak_password
+    networks:
+      - keycloak_network
 
   keycloak:
     container_name: keycloak
@@ -23,9 +25,22 @@ services:
       DB_PASSWORD: keycloak_password
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_HEALTH_ENABLED: "true"
+      KC_LOG_LEVEL: info
     ports:
       - "8090:8080"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8080/health/ready" ]
+      interval: 15s
+      timeout: 2s
+      retries: 15
     volumes:
-      - ../docker_db/keycloak/realms/:/opt/keycloak/data/import/
+      - ./keycloak-data:/opt/keycloak/data/import/realm.json
     depends_on:
       - keycloak-mysql
+    networks:
+      - keycloak_network
+
+networks:
+  keycloak_network:
+    driver: bridge

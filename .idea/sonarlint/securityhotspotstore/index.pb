@@ -82,8 +82,6 @@ S
 Sorder-service/src/main/java/com/mylearning/orderservice/client/InventoryClient.java,0\0\00d8c483c67e23c0883522f08fdbb3ba7f515393
 C
 docker-compose.yaml,e\f\ef8def03dc8f162799089e9b5f4321201c8810d5
-Ä
-Porder-service/src/main/java/com/mylearning/orderservice/stub/InventoryStubs.java,e\d\edad9bf226b88d4e3efc8e63ebc86734897460f3
 è
 _order-service/src/main/java/com/mylearning/orderservice/exception/ProductNotFoundException.java,3\a\3ad1fe4a89b18d8ecdaf24d2b099cf219e188226
 C
@@ -106,3 +104,9 @@ Qorder-service/src/main/java/com/mylearning/orderservice/config/OpenAPIConfig.ja
 Yinventory-service/src/main/java/com/mylearning/inventoryservice/config/OpenAPIConfig.java,8\7\874f2ceb2d9b5b5e5ddc862bee59bcb42b81c156
 Ç
 Rproduct-service/src/main/java/com/mylearning/productservice/config/CorsConfig.java,1\7\17c0b3fa24d66217052f33f5bc833479bbd2d9a4
+Ñ
+Torder-service/src/main/java/com/mylearning/orderservice/config/RestClientConfig.java,e\4\e4e49b3dbf38f969df6474b1865b8a65ff0398a5
+Ä
+Porder-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java,2\6\268854f35de24c1ce6d15f9c191077933f1f33b0
+ç
+]order-service/src/main/java/com/mylearning/orderservice/exception/GlobalExceptionHandler.java,8\4\8462a7722cae86d8800b69a559e7b2345562705c
