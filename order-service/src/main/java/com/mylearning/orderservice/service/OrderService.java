@@ -15,6 +15,7 @@ import com.mylearning.orderservice.model.Order;
 import com.mylearning.orderservice.repository.OrderRepository;
 import com.mylearning.orderservice.dto.OrderRequest;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,6 +25,7 @@ import java.util.UUID;
 
 @Service
 @Transactional
+@Slf4j
 public class OrderService {
 
     private final OrderRepository orderRepository;
@@ -38,10 +40,14 @@ public class OrderService {
 
     public void placeOrder(OrderRequest orderRequest) {
         boolean inStock = inventoryClient.isInStock(orderRequest.skuCode(), orderRequest.quantity());
+        log.info("OrderService.placeOrder :: inStock {}",inStock);
         if (inStock) {
+            log.info("OrderService.placeOrder :: if Block");
             var order = mapToOrder(orderRequest);
             orderRepository.save(order);
+            log.info("OrderService.placeOrder :: if Block order :: {}",order);
         }else {
+            log.info("OrderService.placeOrder :: else Block");
             throw new ProductNotFoundException("Product with SkuCode : " + orderRequest.skuCode() + " is not in Stock");
         }
     }

@@ -1,6 +1,7 @@
 package com.mylearning.inventoryservice.service;
 
 import com.mylearning.inventoryservice.repository.InventoryRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,7 @@ public class InventoryService {
 
     @Transactional(readOnly = true)
     public boolean isInStock(String skuCode, Integer quantity) {
+        log.info("InventoryService.isInStock called with skuCode: {} and quantity: {}",skuCode,quantity);
         return inventoryRepository.existsBySkuCodeAndQuantityIsGreaterThanEqual(skuCode, quantity)>0;
     }
 

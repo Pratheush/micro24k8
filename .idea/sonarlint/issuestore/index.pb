@@ -86,3 +86,5 @@ C
 Porder-service/src/main/java/com/mylearning/orderservice/stub/InventoryStubs.java,e\d\edad9bf226b88d4e3efc8e63ebc86734897460f3
 è
 _order-service/src/main/java/com/mylearning/orderservice/exception/ProductNotFoundException.java,3\a\3ad1fe4a89b18d8ecdaf24d2b099cf219e188226
+ç
+]order-service/src/main/java/com/mylearning/orderservice/exception/GlobalExceptionHandler.java,8\4\8462a7722cae86d8800b69a559e7b2345562705c
