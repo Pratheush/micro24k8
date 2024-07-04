@@ -19,7 +19,7 @@ public class InventoryService {
 
 
     @Transactional(readOnly = true)
-    public boolean isInStock(String skuCode, Integer quantity) {
+    public Boolean isInStock(String skuCode, Integer quantity) {
         log.info("InventoryService.isInStock called with skuCode: {} and quantity: {}",skuCode,quantity);
         return inventoryRepository.existsBySkuCodeAndQuantityIsGreaterThanEqual(skuCode, quantity)>0;
     }

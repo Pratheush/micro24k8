@@ -50,18 +50,18 @@ class InventoryServiceApplicationTests {
 
     @Test
     void shouldReadInventory() {
-        var response = RestAssured.given()
+        var positiveResponse = RestAssured.given()
                 .when()
                 .get("/api/inventory?skuCode=Inventory1&quantity=1")
                 .then()
                 .log().all()
                 .statusCode(200)
                 .extract().response().as(Boolean.class);
-        assertTrue(response);
+        assertTrue(positiveResponse);
 
         var negativeResponse = RestAssured.given()
                 .when()
-                .get("/api/inventory?skuCode=Inventory2&quantity=11")
+                .get("/api/inventory?skuCode=Inventory3&quantity=10")
                 .then()
                 .log().all()
                 .statusCode(HttpStatus.OK.value())

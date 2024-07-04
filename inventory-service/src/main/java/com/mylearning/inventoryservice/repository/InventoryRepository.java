@@ -30,6 +30,4 @@ public interface InventoryRepository extends JpaRepository<Inventory, Long> {
     @Query(value = "SELECT COUNT(*) > 0 FROM t_inventory WHERE sku_code = :skuCode AND quantity >= :quantity", nativeQuery = true)
     Long existsBySkuCodeAndQuantityIsGreaterThanEqual(String skuCode, int quantity);
 
-
-
 }

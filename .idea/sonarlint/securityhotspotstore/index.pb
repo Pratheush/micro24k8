@@ -90,3 +90,9 @@ _order-service/src/main/java/com/mylearning/orderservice/exception/ProductNotFou
 ]order-service/src/main/java/com/mylearning/orderservice/exception/GlobalExceptionHandler.java,8\4\8462a7722cae86d8800b69a559e7b2345562705c
 €
 Porder-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java,2\6\268854f35de24c1ce6d15f9c191077933f1f33b0
+„
+Torder-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubsTrue.java,5\0\506c888e7be251fa931c3da9995e98e4381a009e
+y
+Iorder-service/src/test/java/com/mylearning/orderservice/WireMockDemo.java,c\c\ccd785c560b082c83a6a5742a22fe21aa7fd19ce
+~
+Norder-service/src/test/java/com/mylearning/orderservice/WireMockDemoTests.java,6\b\6be96cabe826693829805db52ff83de71f2a0b21
