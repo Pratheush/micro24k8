@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "inventory", url = "${inventory.url}")
+@FeignClient(value = "inventory-service", url = "${inventory.url}")
 public interface InventoryClient {
     @RequestMapping(method = RequestMethod.GET, value = "/api/inventory")
-    Boolean isInStock(@RequestParam String skuCode, @RequestParam Integer quantity);
+    boolean isInStock(@RequestParam String skuCode, @RequestParam Integer quantity);
 
     /*@GetMapping(value = "/api/inventory")
     boolean isInStock(@RequestParam List<String> skuCode, @RequestParam List<Integer> quantity);*/

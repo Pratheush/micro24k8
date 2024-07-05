@@ -58,7 +58,6 @@ public class WireMockDemoTests {
 
     @Test
     void test1() throws IOException {
-
         // web service is then stubbed:
         WireMock.configureFor("localhost", 7070);
         WireMock.stubFor(WireMock.get(WireMock.urlEqualTo("/baeldung"))

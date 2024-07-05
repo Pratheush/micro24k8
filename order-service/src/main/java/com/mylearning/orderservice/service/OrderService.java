@@ -39,7 +39,7 @@ public class OrderService {
     }
 
     public void placeOrder(OrderRequest orderRequest) {
-        boolean inStock = inventoryClient.isInStock(orderRequest.skuCode(), orderRequest.quantity());
+        /*boolean inStock = inventoryClient.isInStock(orderRequest.skuCode(), orderRequest.quantity());
         log.info("OrderService.placeOrder :: inStock {}",inStock);
         if (inStock) {
             log.info("OrderService.placeOrder :: if Block");
@@ -48,8 +48,20 @@ public class OrderService {
             log.info("OrderService.placeOrder :: if Block order :: {}",order);
         }else {
             log.info("OrderService.placeOrder :: else Block");
-            throw new ProductNotFoundException("Product with SkuCode : " + orderRequest.skuCode() + " is not in Stock");
+            throw new ProductNotFoundException("Product with SkuCode :" + orderRequest.skuCode() + " is not in Stock");
+        }*/
+
+        boolean inStock = inventoryClient.isInStock(orderRequest.skuCode(), orderRequest.quantity());
+        log.info("OrderService.placeOrder :: inStock {}",inStock);
+        if(!inStock) {
+            log.info("OrderService.placeOrder :: not inStock Block");
+            throw new ProductNotFoundException("Product with SkuCode :" + orderRequest.skuCode() + " is not in Stock");
+            //throw new RuntimeException("Product with SkuCode :" + orderRequest.skuCode() + " is not in Stock");
         }
+        log.info("OrderService.placeOrder :: inStock Block");
+        var order = mapToOrder(orderRequest);
+        orderRepository.save(order);
+        log.info("OrderService.placeOrder :: inStock Block order :: {}",order);
     }
 
     private static Order mapToOrder(OrderRequest orderRequest) {

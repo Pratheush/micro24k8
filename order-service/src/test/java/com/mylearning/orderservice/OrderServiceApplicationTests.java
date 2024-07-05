@@ -1,12 +1,15 @@
 package com.mylearning.orderservice;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
+import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
+import com.github.tomakehurst.wiremock.matching.StringValuePattern;
 import com.mylearning.orderservice.client.InventoryClient;
 import com.mylearning.orderservice.dto.OrderRequest;
-import com.mylearning.orderservice.stub.InventoryStubs;
+import com.mylearning.stub.InventoryClientStub;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import lombok.extern.slf4j.Slf4j;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -21,8 +24,6 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 //import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock;
 import org.springframework.http.HttpStatus;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.MySQLContainer;
 import org.testcontainers.utility.DockerImageName;
 
@@ -32,7 +33,9 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 //@ActiveProfiles(value = {"qa"})
+@Slf4j
 @ExtendWith(MockitoExtension.class)
+//@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 //@AutoConfigureWireMock(port = 0)
 class OrderServiceApplicationTests {
@@ -75,7 +78,6 @@ class OrderServiceApplicationTests {
     public static void teardown() {
         // Stop the WireMock server
         wireMockServer.stop();
-        mySQLContainer.stop();
     }
 
     // Configuring the rest-assured
@@ -86,8 +88,46 @@ class OrderServiceApplicationTests {
         RestAssured.port = port;
     }
 
-    static {
+    @BeforeAll
+    public static void mysqlSetup() {
         mySQLContainer.start();
+    }
+
+    @AfterAll
+    public static void mysqlTeardown() {
+        mySQLContainer.stop();
+    }
+
+
+    /*static {
+        mySQLContainer.start();
+    }*/
+
+
+    @Test
+    void shouldPlaceOrder() {
+        String requestBody = """
+         {
+             "skuCode":"iphone_15",
+             "price": 1000,
+             "quantity": 1
+         }
+         """;
+
+
+        InventoryClientStub.stubInventoryCallTrue("iphone_15", 1);
+
+
+        var responseBodyString = RestAssured.given()
+                .contentType("application/json")
+                .body(requestBody)
+                .when()
+                .post("/api/order")
+                .then()
+                .statusCode(201)
+                .extract()
+                .body().asString();
+        assertThat(responseBodyString, Matchers.is("Order placed successfully"));
     }
 
     /**
@@ -98,31 +138,61 @@ class OrderServiceApplicationTests {
     @Test
     void shouldSubmitOrderWithTrueResponseFromInventory() {
 
+        // below WireMock.configureFor is commented since WireMock is @AutoConfigureWireMock(port=0) means port is random
+        WireMock.configureFor("localhost",7070);
+
+        StringValuePattern stringValuePatternSkuCode=WireMock.equalTo("\"iphone_17\"");
+
+        /*WireMock.stubFor(WireMock.get(WireMock.urlPathEqualTo("/api/inventory"))
+                .withQueryParam("skuCode", WireMock.matching("[a-zA-Z0-9_]+"))
+                .withQueryParam("quantity",WireMock.matching("\\d+"))
+                .withHeader("Content-Type", WireMock.equalTo("application/json"))
+                .willReturn(WireMock.aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type","text/plain")
+                        .withBody("true")));*/
+
+        // Stub for the /api/inventory endpoint with specific query params
+        WireMock.stubFor(WireMock.get(WireMock.urlPathEqualTo("/api/inventory"))
+                .withQueryParam("skuCode", WireMock.equalTo("iphone_17"))
+                .withQueryParam("quantity", WireMock.equalTo("3"))
+                .willReturn(WireMock.aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type", "application/json")
+                        .withBody("true")));
+
         String submitOrderJson = """
                 {
-                     "skuCode": "iphone_15",
+                     "skuCode": "iphone_17",
                      "price": 1000,
-                     "quantity": 100
+                     "quantity": 3
                 }
                 """;
 
-        OrderRequest orderRequest= new OrderRequest(null,"iphone_15", BigDecimal.valueOf(1000),100);
+        // Prepare the JSON request body
+        String jsonBody = "{ \"skuCode\": \"iphone_17\", \"price\": 1000, \"quantity\": 3 }";
 
-        InventoryStubs.stubInventoryCallTrue("iphone_15", 100);
+        OrderRequest orderRequest= new OrderRequest(null,"iphone_17", BigDecimal.valueOf(1000),3);
+
+        log.info("Rest Assured Attributes::uri::{} port ::{}",RestAssured.baseURI,RestAssured.port);
+
+        //WireMock.verify(WireMock.getRequestedFor(WireMock.urlEqualTo("/api/inventory?skuCode=iphone_17&quantity=3")));
 
         // uses Rest-Assured to simulate a POST request to the /api/order endpoint.
-        var responseBodyString = RestAssured.given()
+       // var responseBodyString =
+                RestAssured.given()
                 .contentType(ContentType.JSON)
-                .body(submitOrderJson)
+                .body(jsonBody)
                 .when()
                 .post("/api/order")
                 .then()
                 .log().all()
                 .statusCode(HttpStatus.CREATED.value())
-                .extract()
-                .body().asString();
+                .body(Matchers.equalTo("Order Placed Successfully"));
+                //.extract()
+                //.body().asString();
 
-        assertThat(responseBodyString, Matchers.is("Order Placed Successfully"));
+        //assertThat(responseBodyString, Matchers.is("Order Placed Successfully"));
 
     }
 
@@ -143,8 +213,8 @@ class OrderServiceApplicationTests {
                 .then()
                 .log().all()
                 .statusCode(HttpStatus.NOT_FOUND.value())
-                //.body("message",Matchers.equalTo("Product with SkuCode : " + orderRequest.skuCode() + " is not in Stock"));
-                .body(Matchers.equalTo("Product with SkuCode : " + orderRequest.skuCode() + " is not in Stock"));
+                //.body("message",Matchers.equalTo("Product with SkuCode :" + orderRequest.skuCode() + " is not in Stock"));
+                .body(Matchers.equalTo("Product with SkuCode :" + orderRequest.skuCode() + " is not in Stock"));
     }
 
     @Test
@@ -169,12 +239,49 @@ class OrderServiceApplicationTests {
         assertThat(responseBodyString, Matchers.is("Order Placed Successfully"));
     }
 
+
     @Test
     void shouldSubmitOrderWithFalseResponseFromInventory() {
 
-        OrderRequest orderRequest= new OrderRequest(null,"iphone_17", BigDecimal.valueOf(3000),3);
+        WireMock.configureFor("localhost",7070);
 
-        InventoryStubs.stubInventoryCallFalse("iphone_17", 3);
+        StringValuePattern stringValuePatternSkuCode=WireMock.equalTo("\"iphone_17\"");
+
+        /*WireMock.stubFor(WireMock.get(WireMock.urlPathEqualTo("/api/inventory"))
+                .withQueryParam("skuCode", WireMock.matching("[a-zA-Z0-9_]+"))
+                .withQueryParam("quantity",WireMock.matching("\\d+"))
+                .withHeader("Content-Type", WireMock.equalTo("application/json"))
+                .willReturn(WireMock.aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type","application/json")
+                        .withBody("false")));*/
+
+        /*String skuCode = "iphone_17";
+        Integer quantity= 3;
+        WireMock.stubFor(WireMock.get(WireMock.urlPathEqualTo("/api/inventory?skuCode=" + skuCode + "&quantity=" + quantity))
+                .withHeader("Content-Type", WireMock.equalTo("application/json"))
+                .willReturn(WireMock.aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type","application/json")
+                        .withBody("false")));*/
+
+        // Stub for the /api/inventory endpoint with specific query params
+        WireMock.stubFor(WireMock.get(WireMock.urlPathEqualTo("/api/inventory"))
+                .withQueryParam("skuCode", WireMock.equalTo("iphone_17"))
+                .withQueryParam("quantity", WireMock.equalTo("3"))
+                .willReturn(WireMock.aResponse()
+                        .withStatus(200)
+                        .withHeader("Content-Type", "application/json")
+                        .withBody("false")));
+
+        // Prepare the JSON request body
+        String jsonBody = "{ \"skuCode\": \"iphone_17\", \"price\": 1000, \"quantity\": 3 }";
+
+        OrderRequest orderRequest= new OrderRequest(null,"iphone_17", BigDecimal.valueOf(1000),3);
+
+        //InventoryClientStub.stubInventoryCallFalse(orderRequest.skuCode(),orderRequest.quantity());
+
+        log.info("Rest Assured Attributes::uri::{} port ::{}",RestAssured.baseURI,RestAssured.port);
 
        given()
                 .contentType(ContentType.JSON)
@@ -184,7 +291,7 @@ class OrderServiceApplicationTests {
                 .then()
                 .log().all()
                 .statusCode(HttpStatus.NOT_FOUND.value())
-                .body(Matchers.equalToIgnoringCase("Product with SkuCode : " + orderRequest.skuCode() + " is not in Stock"));
+                .body(Matchers.equalToIgnoringCase("Product with SkuCode :" + orderRequest.skuCode() + " is not in Stock"));
 
     }
 

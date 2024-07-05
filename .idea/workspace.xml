@@ -5,20 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae595e5-f700-4b14-9099-09eb690cca25" name="Changes" comment="commit untracked changes frod intelij">
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/WireMockDemoTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/resources/wiremock_intro.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceAppTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/stub/InventoryClientStub.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/controller/InventoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/repository/InventoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/service/InventoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/mylearning/inventoryservice/InventoryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/mylearning/inventoryservice/InventoryServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/client/InventoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/client/InventoryClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-intercon.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-intercon.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/WireMockDemoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/WireMockDemoTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,10 +54,14 @@
   "keyToString": {
     "JUnit.InventoryServiceApplicationTests.executor": "Run",
     "JUnit.InventoryServiceApplicationTests.shouldReadInventory.executor": "Run",
+    "JUnit.OrderServiceAppTests.executor": "Coverage",
+    "JUnit.OrderServiceAppTests.productNotFound.executor": "Run",
+    "JUnit.OrderServiceAppTests.shouldPlaceOrder.executor": "Run",
     "JUnit.OrderServiceApplicationTests.executor": "Run",
     "JUnit.OrderServiceApplicationTests.placeOrder_ProductInStock_UsingMockito.executor": "Run",
     "JUnit.OrderServiceApplicationTests.placeOrder_ProductNotInStock_ShouldReturnBadRequest.executor": "Run",
     "JUnit.OrderServiceApplicationTests.placeOrder_ShouldReturnSuccessMessage.executor": "Run",
+    "JUnit.OrderServiceApplicationTests.shouldPlaceOrder.executor": "Run",
     "JUnit.OrderServiceApplicationTests.shouldSubmitOrder.executor": "Run",
     "JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithFalseResponseFromInventory.executor": "Run",
     "JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventory.executor": "Run",
@@ -72,6 +74,7 @@
     "JUnit.WireMockDemo.test1.executor": "Run",
     "JUnit.WireMockDemo.test2.executor": "Run",
     "JUnit.WireMockDemoTests.executor": "Run",
+    "JUnit.WireMockDemoTests.test1.executor": "Run",
     "JUnit.WireMockDemoTests.test2.executor": "Run",
     "JUnit.WireMockDemoTests.test3.executor": "Run",
     "JUnit.WireMockDemoTests.test4.executor": "Run",
@@ -92,7 +95,7 @@
     "git-widget-placeholder": "inter-process-comm",
     "jdk.selected.JAVA_MODULE": "22",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/jlab/git2024/micro24k8/my_micro_24_k8/inventory-service/src/main/java/com/mylearning/inventoryservice/repository/InventoryRepository.java",
+    "last_opened_file_path": "D:/jlab/git2024/micro24k8/my_micro_24_k8/order-service/src/test/java/com/mylearning",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -128,8 +131,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WireMockDemoTests">
-    <configuration name="WireMockDemoTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.OrderServiceAppTests">
+    <configuration name="OrderServiceAppTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
@@ -138,13 +141,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.WireMockDemoTests" />
+      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceAppTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WireMockDemoTests.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceAppTests.productNotFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
@@ -153,14 +156,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.WireMockDemoTests" />
-      <option name="METHOD_NAME" value="test3" />
+      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceAppTests" />
+      <option name="METHOD_NAME" value="productNotFound" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WireMockDemoTests.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceAppTests.shouldPlaceOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
@@ -169,14 +172,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.WireMockDemoTests" />
-      <option name="METHOD_NAME" value="test4" />
+      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceAppTests" />
+      <option name="METHOD_NAME" value="shouldPlaceOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WireMockDemoTests.test5_withoutPriority" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceApplicationTests.shouldSubmitOrderWithFalseResponseFromInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
@@ -185,14 +188,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.WireMockDemoTests" />
-      <option name="METHOD_NAME" value="test5_withoutPriority" />
+      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceApplicationTests" />
+      <option name="METHOD_NAME" value="shouldSubmitOrderWithFalseResponseFromInventory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WireMockDemoTests.test6_withPriority" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
         <pattern>
@@ -201,8 +204,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.WireMockDemoTests" />
-      <option name="METHOD_NAME" value="test6_withPriority" />
+      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceApplicationTests" />
+      <option name="METHOD_NAME" value="shouldSubmitOrderWithTrueResponseFromInventory" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -224,11 +227,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WireMockDemoTests" />
-        <item itemvalue="JUnit.WireMockDemoTests.test6_withPriority" />
-        <item itemvalue="JUnit.WireMockDemoTests.test5_withoutPriority" />
-        <item itemvalue="JUnit.WireMockDemoTests.test4" />
-        <item itemvalue="JUnit.WireMockDemoTests.test3" />
+        <item itemvalue="JUnit.OrderServiceAppTests" />
+        <item itemvalue="JUnit.OrderServiceAppTests.productNotFound" />
+        <item itemvalue="JUnit.OrderServiceAppTests.shouldPlaceOrder" />
+        <item itemvalue="JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithFalseResponseFromInventory" />
+        <item itemvalue="JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventory" />
       </list>
     </recent_temporary>
   </component>
@@ -253,6 +256,7 @@
       <workItem from="1719036512050" duration="21000" />
       <workItem from="1719064808887" duration="29902000" />
       <workItem from="1719388688918" duration="5048000" />
+      <workItem from="1720134240280" duration="24713000" />
     </task>
     <task id="LOCAL-00001" summary="commit untracked changes frod intelij">
       <option name="closed" value="true" />
@@ -311,19 +315,9 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceApplicationTests.java</url>
-          <line>110</line>
-          <option name="timeStamp" value="16" />
+          <line>243</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/client/InventoryClient.java</url>
