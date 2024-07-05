@@ -110,3 +110,7 @@ Torder-service/src/main/java/com/mylearning/orderservice/config/RestClientConfig
 Porder-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java,2\6\268854f35de24c1ce6d15f9c191077933f1f33b0
 ç
 ]order-service/src/main/java/com/mylearning/orderservice/exception/GlobalExceptionHandler.java,8\4\8462a7722cae86d8800b69a559e7b2345562705c
+É
+Sorder-service/src/test/java/com/mylearning/orderservice/OrderServiceAppTesting.java,0\4\049bebefbe175e10134935405aaeef8b13a7a706
+Ä
+Porder-service/src/test/java/com/mylearning/orderservice/OrderServiceAppTest.java,a\1\a1b3a36b8d850ba0ff34b769c9bd07f8ca9cd22b

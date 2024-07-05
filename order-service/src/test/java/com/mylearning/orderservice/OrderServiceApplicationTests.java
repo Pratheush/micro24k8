@@ -2,7 +2,6 @@ package com.mylearning.orderservice;
 
 import com.mylearning.orderservice.client.InventoryClient;
 import com.mylearning.orderservice.dto.OrderRequest;
-import com.mylearning.orderservice.exception.ProductNotFoundException;
 import com.mylearning.orderservice.stub.InventoryStubs;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -26,7 +25,6 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 //@ActiveProfiles(value = {"qa"})
-@ExtendWith(MockitoExtension.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureWireMock(port = 0) // i want to autoconfigure the wiremock related classes for testing. will start wiremock server as part of the spring-application context
 class OrderServiceApplicationTests {

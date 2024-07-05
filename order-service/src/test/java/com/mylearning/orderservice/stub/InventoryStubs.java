@@ -26,7 +26,7 @@ public class InventoryStubs {
         log.info("InventoryStubs stub False:{}", skuCode);
         stubFor(get(urlEqualTo("/api/inventory?skuCode=" + skuCode + "&quantity=" + quantity))
                 .willReturn(aResponse()
-                        .withStatus(404)
+                        .withStatus(200)
                         .withHeader("Content-Type", "application/json")
                         .withBody("false")));
         log.info("InventoryStubs stub False method_end :{}", skuCode);
