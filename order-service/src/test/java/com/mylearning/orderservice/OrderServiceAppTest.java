@@ -1,6 +1,7 @@
 package com.mylearning.orderservice;
 
 
+import com.github.tomakehurst.wiremock.client.WireMock;
 import com.mylearning.orderservice.dto.OrderRequest;
 import com.mylearning.orderservice.stub.InventoryStubs;
 import io.restassured.RestAssured;
@@ -45,7 +46,7 @@ class OrderServiceAppTest {
 
         OrderRequest orderRequest= new OrderRequest(null,"LaptopBag", BigDecimal.valueOf(3000),9);
 
-        InventoryStubs.stubInventoryCallTrue("LaptopBag", 9);
+        InventoryStubs.stubInventoryCallTrue(orderRequest.skuCode(), orderRequest.quantity());
 
         var responseBodyString = given()
                 .contentType(ContentType.JSON)
@@ -58,6 +59,7 @@ class OrderServiceAppTest {
                 .extract()
                 .body().asString();
 
+        WireMock.verify(WireMock.getRequestedFor(WireMock.urlEqualTo("/api/inventory?skuCode=" + orderRequest.skuCode() + "&quantity=" + orderRequest.quantity())));
         assertThat(responseBodyString, Matchers.is("Order Placed Successfully"));
 
     }
@@ -79,5 +81,6 @@ class OrderServiceAppTest {
                 .statusCode(HttpStatus.NOT_FOUND.value())
                 .body(Matchers.equalToIgnoringCase("Product with SkuCode : " + orderRequest.skuCode() + " is not in Stock"));
 
+        WireMock.verify(WireMock.getRequestedFor(WireMock.urlEqualTo("/api/inventory?skuCode=" + orderRequest.skuCode() + "&quantity=" + orderRequest.quantity())));
     }
 }

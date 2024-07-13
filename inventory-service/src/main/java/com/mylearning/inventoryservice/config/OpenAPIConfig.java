@@ -6,6 +6,7 @@ import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import io.swagger.v3.oas.models.servers.Server;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,12 +14,13 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 @Configuration
+@Slf4j
 public class OpenAPIConfig {
     @Value("${inventory.openapi.dev-url}")
     private String devUrl;
 
     @Bean
-    public OpenAPI myOpenAPI() {
+    public OpenAPI inventoryServiceOpenAPI() {
         Server devServer = new Server();
         devServer.setUrl(devUrl);
         devServer.setDescription("Server URL in Development environment");
@@ -38,13 +40,18 @@ public class OpenAPIConfig {
                 .termsOfService("https://www.termsandconditionsgenerator.com/")
                 .license(mitLicense);
 
+        ExternalDocumentation externalDocumentation = new ExternalDocumentation()
+                .description("You can refer to the Inventory Service Wiki Documentation")
+                .url("https://inventory-service-dummy-url.com/docs");
+
+        List<Server> serverList = List.of(devServer);
+
+        log.info("OpenAPIConfig info :: {} :: externalDocumentation :: {} :: serverList :: {} ",info,externalDocumentation,serverList);
+
         return new OpenAPI()
                 .info(info)
-                .externalDocs(new ExternalDocumentation()
-                        .description("You can refer to the Inventory Service Wiki Documentation")
-                        .url("https://inventory-service-dummy-url.com/docs"))
-                .servers(List.of(devServer));
-
+                .externalDocs(externalDocumentation)
+                .servers(serverList);
 
     }
 

@@ -29,9 +29,10 @@ public class RestClientConfig {
                 .build();
         var restClientAdapter = RestClientAdapter.create(restClient);
         var httpServiceProxyFactory = HttpServiceProxyFactory.builderFor(restClientAdapter).build();
-        return httpServiceProxyFactory.createClient(InventoryClient.class);
+        return httpServiceProxyFactory.createClient(InventoryClient.class); // its binding the InventoryClient interface to httpServiceProxyFactory
     }
 
+    // Instead of adding @TimeLimiter annotation here we are adding time-out configuration
     private ClientHttpRequestFactory getClientRequestFactory() {
         log.info("RestClientConfig.getClientRequestFactory called");
         ClientHttpRequestFactorySettings clientHttpRequestFactorySettings = ClientHttpRequestFactorySettings.DEFAULTS

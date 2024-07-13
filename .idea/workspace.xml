@@ -5,12 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae595e5-f700-4b14-9099-09eb690cca25" name="Changes" comment="commit untracked changes frod intelij">
-      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceAppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mylearning/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mylearning/routes/Routes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/FeignConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/stub/InventoryClientStub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/6792b0fa1f2701c45c72c59018d5096f3429af9a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/6792b0fa1f2701c45c72c59018d5096f3429af9a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/com/mylearning/ApiGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mylearning/ApiGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/com/mylearning/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/com/mylearning/routes/Routes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-apigateway.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-apigateway.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/config/OpenAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/config/OpenAPIConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/controller/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/OrderServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/client/InventoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/client/InventoryClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/OpenAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/OpenAPIConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/RestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/RestClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/exception/ProductNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/exception/ProductNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/config/OpenAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/config/OpenAPIConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application-dev.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +62,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -49,8 +75,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "JUnit.InventoryServiceApplicationTests.executor": "Run",
+    "JUnit.InventoryServiceApplicationTests.executor": "Coverage",
     "JUnit.InventoryServiceApplicationTests.shouldReadInventory.executor": "Run",
+    "JUnit.OrderServiceAppTest.executor": "Coverage",
     "JUnit.OrderServiceAppTesting.executor": "Run",
     "JUnit.OrderServiceAppTesting.shouldSubmitOrderWithFalseResponseFromInventory.executor": "Run",
     "JUnit.OrderServiceAppTesting.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock.executor": "Run",
@@ -61,7 +88,7 @@
     "JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithFalseResponseFromInventory.executor": "Run",
     "JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventory.executor": "Run",
     "JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock.executor": "Run",
-    "JUnit.ProductServiceApplicationTests.executor": "Run",
+    "JUnit.ProductServiceApplicationTests.executor": "Coverage",
     "JUnit.ProductServiceApplicationTests.getAllProducts_ShouldReturnAllProducts.executor": "Run",
     "JUnit.ProductServiceApplicationTests.shouldCreateProduct.executor": "Run",
     "JUnit.ProductServiceApplicationTests.shouldCreateProduct_24.executor": "Run",
@@ -80,10 +107,10 @@
     "Spring Boot.InventoryServiceApplication.executor": "Run",
     "Spring Boot.OrderServiceApplication.executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
-    "git-widget-placeholder": "circuit-breaker",
+    "git-widget-placeholder": "ckt-bkr-wiremock-updtd",
     "jdk.selected.JAVA_MODULE": "22",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/jlab/git2024/micro24k8/my_micro_24_k8/order-service/src/test/java/com/mylearning/orderservice",
+    "last_opened_file_path": "D:/jlab/git2024/micro24k8/my_micro_24_k8/api-gateway/src/main/java/com",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -107,8 +134,13 @@
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\product-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\api-gateway\src\main\java" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\order-service\src\main\resources\db\migration" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mylearning.inventoryservice.config" />
+      <recent name="com.mylearning.orderservice.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -120,7 +152,22 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.OrderServiceAppTesting">
+  <component name="RunManager" selected="JUnit.InventoryServiceApplicationTests">
+    <configuration name="InventoryServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="inventory-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mylearning.inventoryservice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.mylearning.inventoryservice" />
+      <option name="MAIN_CLASS_NAME" value="com.mylearning.inventoryservice.InventoryServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrderServiceAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
       <extension name="coverage">
@@ -152,50 +199,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceAppTest.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
+    <configuration name="ProductServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="product-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mylearning.orderservice.*" />
+          <option name="PATTERN" value="com.mylearning.productservice.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceAppTest" />
-      <option name="METHOD_NAME" value="shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.mylearning.productservice" />
+      <option name="MAIN_CLASS_NAME" value="com.mylearning.productservice.ProductServiceApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceApplicationTests.placeOrder_ProductNotInStock_ShouldReturnBadRequest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.ApiGatewayApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.mylearning.orderservice.*" />
+          <option name="PATTERN" value="com.mylearning.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceApplicationTests" />
-      <option name="METHOD_NAME" value="placeOrder_ProductNotInStock_ShouldReturnBadRequest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mylearning.orderservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceApplicationTests" />
-      <option name="METHOD_NAME" value="shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="inventory-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.inventoryservice.InventoryServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -216,11 +250,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.OrderServiceAppTesting" />
+        <item itemvalue="JUnit.InventoryServiceApplicationTests" />
+        <item itemvalue="JUnit.OrderServiceAppTest" />
+        <item itemvalue="JUnit.ProductServiceApplicationTests" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="JUnit.OrderServiceAppTest.shouldSubmitOrderWithFalseResponseFromInventory" />
-        <item itemvalue="JUnit.OrderServiceAppTest.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock" />
-        <item itemvalue="JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock" />
-        <item itemvalue="JUnit.OrderServiceApplicationTests.placeOrder_ProductNotInStock_ShouldReturnBadRequest" />
       </list>
     </recent_temporary>
   </component>
@@ -249,6 +283,12 @@
       <workItem from="1719721349327" duration="10144000" />
       <workItem from="1719883080341" duration="8840000" />
       <workItem from="1719979458984" duration="9754000" />
+      <workItem from="1720422712623" duration="4112000" />
+      <workItem from="1720490927846" duration="9682000" />
+      <workItem from="1720529181398" duration="4185000" />
+      <workItem from="1720676804410" duration="11263000" />
+      <workItem from="1720771526558" duration="16589000" />
+      <workItem from="1720854802203" duration="8971000" />
     </task>
     <task id="LOCAL-00001" summary="commit untracked changes frod intelij">
       <option name="closed" value="true" />
@@ -280,8 +320,17 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/my_micro_24_k8$OrderServiceAppTest.ic" NAME="OrderServiceAppTest Coverage Results" MODIFIED="1720860773512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.mylearning.orderservice.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/my_micro_24_k8$OrderServiceAppTests.ic" NAME="OrderServiceAppTests Coverage Results" MODIFIED="1720182137262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.mylearning.orderservice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/my_micro_24_k8$InventoryServiceApplicationTests.ic" NAME="InventoryServiceApplicationTests Coverage Results" MODIFIED="1720860845643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.mylearning.inventoryservice.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/my_micro_24_k8$ProductServiceApplicationTests.ic" NAME="ProductServiceApplicationTests Coverage Results" MODIFIED="1720860720362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.mylearning.productservice.*</FILTER>
     </SUITE>
   </component>
 </project>

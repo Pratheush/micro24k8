@@ -25,7 +25,7 @@ public class ProductService {
     }
 
     public void createProduct(ProductRequest productRequest) {
-        logger.info("Creating Product Product Request:: {}", productRequest);
+        logger.info("ProductService Creating Product Product Request:: {}", productRequest);
         Product product= AppUtils.dto2modelpro(productRequest);
         logger.info("After AppUtils :: {}",product);
         productRepository.save(product);
@@ -34,7 +34,7 @@ public class ProductService {
 
     public List<ProductResponse> getAllProducts() {
         List<Product> products = productRepository.findAll();
-        logger.info("getAllProducts called >> list of products:: {}", products);
+        logger.info("ProductService getAllProducts called >> list of products:: {}", products);
         return products.stream().map(this::mapToProductResponse).toList();
     }
 

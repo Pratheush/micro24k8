@@ -18,6 +18,11 @@ services:
     image: quay.io/keycloak/keycloak:25.0.1
     command: [ "start-dev", "--import-realm" ]
     environment:
+      #KC_DB: mysql
+      #KC_DB_URL: jdbc:mysql://mysql:3306/keycloak
+      KC_IMPORT: /opt/keycloak/data/import/realm-export.json
+      #KC_DB_USERNAME: keycloak_user
+      #KC_DB_PASSWORD: keycloak_password
       DB_VENDOR: MYSQL
       DB_ADDR: mysql
       DB_DATABASE: keycloak
@@ -35,7 +40,7 @@ services:
       timeout: 2s
       retries: 15
     volumes:
-      - ./keycloak-data:/opt/keycloak/data/import/realm.json
+      - ./keycloak-data:/opt/keycloak/data/import/
     depends_on:
       - keycloak-mysql
     networks:

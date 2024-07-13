@@ -18,7 +18,7 @@ public class OpenAPIConfig {
     private String devUrl;
 
     @Bean
-    public OpenAPI myOpenAPI() {
+    public OpenAPI productServiceOpenAPI() {
         Server devServer = new Server();
         devServer.setUrl(devUrl);
         devServer.setDescription("Server URL in Development environment");
@@ -28,7 +28,9 @@ public class OpenAPIConfig {
         contact.setName("Raj");
         contact.setUrl("https://www.rajkodin.com");
 
-        License mitLicense = new License().name("MIT License").url("https://choosealicense.com/licenses/mit/");
+        License mitLicense = new License()
+                .name("MIT License")
+                .url("https://choosealicense.com/licenses/mit/");
 
         Info info = new Info()
                 .title("Product Service API")
@@ -38,11 +40,13 @@ public class OpenAPIConfig {
                 .termsOfService("https://www.termsandconditionsgenerator.com/")
                 .license(mitLicense);
 
+        ExternalDocumentation externalDocumentation = new ExternalDocumentation()
+                .description("You can refer to the Product Service Wiki Documentation")
+                .url("https://product-service-dummy-url.com/docs");
+
         return new OpenAPI()
                 .info(info)
-                .externalDocs(new ExternalDocumentation()
-                        .description("You can refer to the Product Service Wiki Documentation")
-                        .url("https://product-service-dummy-url.com/docs"))
+                .externalDocs(externalDocumentation)
                 .servers(List.of(devServer));
 
 

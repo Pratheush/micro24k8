@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ProductNotFoundException extends RuntimeException{
     public ProductNotFoundException(String message){
         super(message);
-        log.info("ProductNotFoundException() Constructor Called");
+        log.info("ProductNotFoundException() Constructor Called :: message {}", message);
     }
 }

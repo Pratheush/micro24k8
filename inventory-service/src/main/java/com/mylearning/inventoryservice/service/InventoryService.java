@@ -18,11 +18,12 @@ public class InventoryService {
 
 
     @Transactional(readOnly = true)
-    public boolean isInStock(String skuCode, Integer quantity) throws InterruptedException {
+    public Boolean isInStock(String skuCode, Integer quantity) throws InterruptedException {
+        log.info("InventoryService isInStock :: skuCode: {}, quantity: {} ",skuCode, quantity);
         // this Thread.sleep() is used to generate TimeOutException to use @TimeLimiter(name = UNSTABLE_PLACE_ORDER) which is implemented in OrderController.
-        //log.info("InventoryService wait started");
-        //Thread.sleep(10000);
-        //log.info("InventoryService wait stopped");
+        log.info("InventoryService wait started");
+        //Thread.sleep(1000);
+        log.info("InventoryService wait stopped");
         return inventoryRepository.existsBySkuCodeAndQuantityIsGreaterThanEqual(skuCode, quantity)>0;
     }
 

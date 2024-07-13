@@ -37,7 +37,12 @@ public class ProductController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
-    public List<ProductResponse> getAllProducts() {
+    public List<ProductResponse> getAllProducts() throws InterruptedException {
+        log.info("ProductController getAllProducts");
+        // this Thread.sleep() is used to generate TimeOutException to use @TimeLimiter(name = UNSTABLE_PLACE_ORDER) which is implemented in OrderController.
+        log.info("ProductController wait started");
+        //Thread.sleep(5000);
+        log.info("ProductController wait stopped");
         log.info("calling :: controller.getAllProducts >>>>> service.getAllProducts");
         return productService.getAllProducts();
     }
