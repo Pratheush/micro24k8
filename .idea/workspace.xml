@@ -5,7 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae595e5-f700-4b14-9099-09eb690cca25" name="Changes" comment="commit untracked changes frod intelij">
+      <change afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/NotificationServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/service/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/avro/order-placed.avsc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/dto/UserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/event/OrderPlacedEvent1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/avro/order-placed.avsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e54e290af753209c7b16dce67f0ffe00130f647" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/e/5e54e290af753209c7b16dce67f0ffe00130f647" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cce55e00438d14b5e139ce1df48c234dc42675a7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/c/cce55e00438d14b5e139ce1df48c234dc42675a7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3bf53ecc442740843266a635cbfe9807b992566" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3bf53ecc442740843266a635cbfe9807b992566" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/InventoryServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/InventoryServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/config/OpenAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/config/OpenAPIConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/controller/InventoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/controller/InventoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/dto/InventoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/dto/InventoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/model/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/model/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/repository/InventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/repository/InventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/inventoryservice/service/InventoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/service/InventoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/test/java/com/mylearning/inventoryservice/InventoryServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/test/java/com/mylearning/InventoryServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/OrderServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/OrderServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/client/InventoryClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/client/InventoryClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/FeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/config/FeignConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/OpenAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/config/OpenAPIConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/config/RestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/config/RestClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/dto/InventoryResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/dto/InventoryResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/dto/OrderRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/dto/OrderRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/event/OrderPlacedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/event/OrderPlacedEvent1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/exception/ProductNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/exception/ProductNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/model/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/orderservice/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-prodk8.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-prodk8.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/OrderServiceAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/OrderServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/OrderServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/orderservice/stub/InventoryStubs.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/test/java/com/mylearning/stub/InventoryStubs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/ProductServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/ProductServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/config/OpenAPIConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/config/OpenAPIConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/dto/ProductRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/dto/ProductRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/dto/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/dto/ProductResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/productservice/util/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/util/AppUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/test/java/com/mylearning/productservice/ProductServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/test/java/com/mylearning/ProductServiceApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +75,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Record" />
         <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -64,6 +124,9 @@
     "JUnit.ProductServiceApplicationTests.shouldCreateProduct_new.executor": "Run",
     "JUnit.ProductServiceApplicationTests.shouldGetAllProducts.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Maven.my_micro_24_k8 [clean,compile].executor": "Run",
+    "Maven.notification-service [clean].executor": "Run",
+    "Maven.notification-service [compile].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -74,17 +137,22 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "Spring Boot.ApiGatewayApplication.executor": "Run",
     "Spring Boot.InventoryServiceApplication.executor": "Run",
+    "Spring Boot.NotificationServiceApplication.executor": "Run",
     "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication (1).executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
-    "git-widget-placeholder": "ckt-bkr-wiremock-updtd",
+    "git-widget-placeholder": "kafka-integratrion",
     "jdk.selected.JAVA_MODULE": "22",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/jlab/git2024/micro24k8/my_micro_24_k8/api-gateway/src/main/java/com",
+    "last_opened_file_path": "D:/jlab/git2024/micro24k8/my_micro_24_k8/notification-service/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3321839",
     "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
   },
@@ -96,13 +164,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\notification-service\src\main\resources" />
+      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\notification-service\src\main\java\com\mylearning\notificationservice" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\inventory-service\src\main\java\com\mylearning\inventoryservice" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\order-service\src\main\java\com\mylearning\orderservice" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\inventory-service" />
-      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\order-service" />
-      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\product-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\order-service\src\main\resources\avro" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\api-gateway\src\main\java" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\order-service\src\main\resources\db\migration" />
@@ -112,77 +181,22 @@
       <recent name="com.mylearning.orderservice.config" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean compile" />
+    </option>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
+        <option value="Application" />
         <option value="MicronautRunConfigurationType" />
         <option value="QuarkusRunConfigurationType" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InventoryServiceApplicationTests">
-    <configuration name="InventoryServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="inventory-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mylearning.inventoryservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mylearning.inventoryservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.inventoryservice.InventoryServiceApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceAppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mylearning.orderservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceAppTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OrderServiceAppTest.shouldSubmitOrderWithFalseResponseFromInventory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="order-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mylearning.orderservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mylearning.orderservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.orderservice.OrderServiceAppTest" />
-      <option name="METHOD_NAME" value="shouldSubmitOrderWithFalseResponseFromInventory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductServiceApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="product-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.mylearning.productservice.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.mylearning.productservice" />
-      <option name="MAIN_CLASS_NAME" value="com.mylearning.productservice.ProductServiceApplicationTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.NotificationServiceApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.ApiGatewayApplication" />
@@ -196,34 +210,72 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="InventoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="inventory-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.inventoryservice.InventoryServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.InventoryServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mylearning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="notification-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.NotificationServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mylearning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="order-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.orderservice.OrderServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.OrderServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mylearning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="product-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.productservice.ProductServiceApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.ProductServiceApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mylearning.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ProductServiceApplication" />
+      <item itemvalue="Spring Boot.InventoryServiceApplication" />
+      <item itemvalue="Spring Boot.NotificationServiceApplication" />
+      <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.ApiGatewayApplication" />
-        <item itemvalue="JUnit.InventoryServiceApplicationTests" />
-        <item itemvalue="JUnit.OrderServiceAppTest" />
-        <item itemvalue="JUnit.ProductServiceApplicationTests" />
-        <item itemvalue="JUnit.OrderServiceAppTest.shouldSubmitOrderWithFalseResponseFromInventory" />
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="Spring Boot.NotificationServiceApplication" />
+        <item itemvalue="Spring Boot.InventoryServiceApplication" />
+        <item itemvalue="Spring Boot.ProductServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +309,9 @@
       <workItem from="1720529181398" duration="4185000" />
       <workItem from="1720676804410" duration="11263000" />
       <workItem from="1720771526558" duration="16589000" />
-      <workItem from="1720854802203" duration="10522000" />
+      <workItem from="1720854802203" duration="19896000" />
+      <workItem from="1721015085182" duration="7923000" />
+      <workItem from="1721130224367" duration="30550000" />
     </task>
     <task id="LOCAL-00001" summary="commit untracked changes frod intelij">
       <option name="closed" value="true" />
@@ -281,7 +335,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/product-service/src/test/java/com/mylearning/productservice/ProductServiceApplicationTests.java</url>
+          <url>file://$PROJECT_DIR$/product-service/src/test/java/com/mylearning/ProductServiceApplicationTests.java</url>
           <line>96</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>

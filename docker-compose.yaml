@@ -39,3 +39,85 @@ services:
       MONGO_INITDB_DATABASE: product-service
     volumes:
       - ./docker_db/mongo_product/:/data/db
+
+# cp-zookeeper which is a Zookeeper cluster that is used to orchestrate multiple Kafka clusters. centralized storage to manage the state of the Kafka cluster.
+# distributed coordination service that manages the Kafka cluster.
+# ZOOKEEPER_CLIENT_PORT: 2181 - Defines the port exposed by Zookeeper for client communication (default is 2181)
+# ZOOKEEPER_TICK_TIME: 2000 - Sets the tick time for Zookeeper's internal heartbeat (default is 2000 milliseconds (2sec))
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.0
+    hostname: zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+# cp-kafka which is the Kafka server
+# Depends On: zookeeper - Ensures the Kafka broker starts only after Zookeeper is up and running
+# KAFKA_BROKER_ID: 1 - Assigns a unique ID for this broker (typically 1 for the first broker). Uniquely Identifying the Broker
+# KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181' - Specifies the Zookeeper connection string (pointing to the Zookeeper service within the Docker Compose network)
+# KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT - Defines the listener security protocols (using PLAINTEXT for simplicity in this example).or ELSE SSL OR TLS SECURITY PROTOCOL, TLS SECURITY PROTOCOL USED IN PRODUCTION.
+# KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-broker-1:9092,PLAINTEXT_INTERNAL://localhost:19092 - Configures the advertised listeners for clients to connect (internal and external).These are the Listeners where Kafka is accepting the connections
+# if we are communicating from one container to the other then we use port 29092 i.e. accessing kafka from different container then use port 29092
+# but if we are communicating or accessing kafka from localhost then we use port 9092
+# KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1 - Sets the replication factor for the Kafka offsets topic (defaults to 1 for a single broker setup).
+  broker:
+    image: confluentinc/cp-kafka:7.6.0
+    container_name: broker
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+# cp-schema-registry is the service we used to define the schema of the messages that are sent between producers and consumers
+# Schema Registry is a service that provides a centralized repository for managing and validating schemas for
+# data serialized in formats such as Avro, JSON Schema, and Protobuf. It ensures that data producers and consumers
+# adhere to a common schema format, facilitating data consistency and interoperability.
+# SCHEMA_REGISTRY_HOST_NAME: Sets the hostname for the Schema Registry Service within the Docker network
+# SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: 'broker:29092' : This property configures the Kafka bootstrap servers for the Schema Registry.  Specifies the Kafka broker address that the Schema Registry will connect to for storing and retrieving schemas.
+# SCHEMA_REGISTRY_LISTENERS: http://schema-registry:8081 : Defines the HTTP endpoint where the Schema Registry service will listen for API requests.. Here 8081 is exposed port for Schema Registry
+  schema-registry:
+    image: confluentinc/cp-schema-registry:7.6.0
+    hostname: schema-registry
+    container_name: schema-registry
+    depends_on:
+      - broker
+    ports:
+      - "8091:8081"
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: 'broker:29092'
+      SCHEMA_REGISTRY_LISTENERS: http://schema-registry:8081
+
+
+# kafka-ui  provides a nice UI to allow us to view the Kafka topics that are created and also helps us to view the messages from and send messages to the Kafka topic
+# service that helps developers to avoid using terminal based Kafka related operations such as consuming or producing messages among others
+# KAFKA_CLUSTERS_NAME: local  :: It allows users to identify the Kafka cluster in the Kafka UI dashboard. In this case, the cluster is named "local"
+
+# KAFKA_CLUSTERS_BOOTSTRAPSERVERS: broker:29092  :: Kafka UI needs to know the address of the Kafka broker to connect to the Kafka cluster.
+# The broker is specified as broker:29092, where broker is the service name defined in the docker-compose.yaml and 29092 is the port on which the Kafka broker is listening.
+
+# KAFKA_CLUSTERS_SCHEMAREGISTRY: http://schema-registry:8081 :: Kafka UI needs access to the Schema Registry to manage and view the schemas used by Kafka topics. The URL http://schema-registry:8081 points to the Schema Registry service running in the Docker Compose setup
+# DYNAMIC_CONFIG_ENABLED: 'true'   :: allows Kafka UI to dynamically reload configuration changes without needing to restart the application.
+  kafka-ui:
+    container_name: kafka-ui
+    image: provectuslabs/kafka-ui:latest
+    ports:
+      - "8092:8080"
+    depends_on:
+      - broker
+      - schema-registry
+    environment:
+      KAFKA_CLUSTERS_NAME: local
+      KAFKA_CLUSTERS_BOOTSTRAPSERVERS: broker:29092
+      KAFKA_CLUSTERS_SCHEMAREGISTRY: http://schema-registry:8081
+      DYNAMIC_CONFIG_ENABLED: 'true'
