@@ -62,7 +62,7 @@ public class OrderService {
         boolean inStock = inventoryClient.isInStock(orderRequest.skuCode(), orderRequest.quantity());
         log.info("Order-Service placeOrder -- inStock:: {}", inStock);
          if (!inStock){
-             log.info("Order-Service placeOrder -- if Block");
+             log.warn("Order-Service placeOrder -- if Block");
              throw new ProductNotFoundException("Product with SkuCode : " + orderRequest.skuCode() + " is not in Stock");
          }
          var order = mapToOrder(orderRequest);
