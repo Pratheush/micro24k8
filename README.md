@@ -38,8 +38,6 @@ USER >>> /api/order >>> API-Gateway >>>> Order-Service >>>>> Inventory-Service
 Trace-> traceID ____________________________________________________________\
 
 
-![](D:\jlab\git2024\micro24k8\Distributed Tracing.png "DISTRIBUTED TRACING EXPLANATION")
-
 
 ![Distributed Tracing.png](..%2FDistributed%20Tracing.png)
 
