@@ -6,6 +6,15 @@
     { "name": "orderNumber", "type": "string" },
     { "name": "email", "type": "string" },
     { "name": "firstName", "type": "string" },
-    { "name": "lastName", "type": "string" }
+    { "name": "lastName", "type": "string" },
+    { "name": "skuCode", "type": "string" },
+    { "name": "price", "type": {
+                               "type": "bytes",
+                               "logicalType": "decimal",
+                               "precision": 10,
+                               "scale": 2
+                             }
+                             },
+    { "name": "quantity", "type": "int" }
   ]
 }

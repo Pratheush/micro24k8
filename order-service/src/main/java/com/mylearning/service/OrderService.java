@@ -75,7 +75,10 @@ public class OrderService {
                 order.getOrderNumber(),
                 orderRequest.userDetails().email(),
                 orderRequest.userDetails().firstName(),
-                orderRequest.userDetails().lastName()
+                orderRequest.userDetails().lastName(),
+                orderRequest.skuCode(),
+                orderRequest.price(),
+                orderRequest.quantity()
         );
 
         log.info("Start- Sending OrderPlacedEvent {} to Kafka Topic", orderPlacedEvent);

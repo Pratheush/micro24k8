@@ -14,4 +14,16 @@ public class GlobalExceptionHandler {
         log.info("GlobalExceptionHandler.handleMailException Called: {} ", ex.getMessage());
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.SERVICE_UNAVAILABLE);
     }
+
+    @ExceptionHandler(PdfException.class)
+    public ResponseEntity<?> handlePdfException(PdfException ex) {
+        log.info("GlobalExceptionHandler.handlePdfException Called: {} ",ex.getMessage());
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NO_CONTENT);
+    }
+
+    @ExceptionHandler(MyMessagingException.class)
+    public ResponseEntity<?> handleMyMessagingException(MyMessagingException ex) {
+        log.info("GlobalExceptionHandler.handlePdfException Called: {} ",ex.getMessage());
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.EXPECTATION_FAILED);
+    }
 }
