@@ -121,3 +121,53 @@ services:
       KAFKA_CLUSTERS_BOOTSTRAPSERVERS: broker:29092
       KAFKA_CLUSTERS_SCHEMAREGISTRY: http://schema-registry:8081
       DYNAMIC_CONFIG_ENABLED: 'true'
+
+  loki:
+    image: grafana/loki:main
+    command: [ "-config.file=/etc/loki/local-config.yaml" ]
+    ports:
+      - "3100:3100"
+    #volumes:
+    #  - ./docker_db/loki/loki-config.yaml:/etc/loki/local-config.yaml
+
+  prometheus:
+    image: prom/prometheus:v2.53.1
+    command:
+      - --enable-feature=exemplar-storage
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./docker_db/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "9090:9090"
+
+
+  tempo:
+    image: grafana/tempo:2.2.2
+    command: [ "-config.file=/etc/tempo.yaml" ]
+    volumes:
+      - ./docker_db/tempo/tempo.yml:/etc/tempo.yaml:ro
+      - ./docker_db/tempo/tempo-data:/tmp/tempo
+    ports:
+      - "3110:3100"  # Tempo
+      - "9411:9411" # zipkin
+
+
+  grafana:
+    image: grafana/grafana:10.2.8
+    volumes:
+      - ./docker_db/grafana:/etc/grafana/provisioning/datasources:ro
+    environment:
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_DISABLE_LOGIN_FORM=true
+      - GF_SECURITY_ADMIN_USER= admin
+      - GF_SECURITY_ADMIN_PASSWORD= admin
+    ports:
+      - "3000:3000"
+
+#  promtail:
+#    image: grafana/promtail:main
+#    volumes:
+#      - ./docker_db/promtail/var/log:/var/log
+#      - ./docker_db/promtail/promtail-config.yaml:/etc/promtail/config.yaml
+#    command: -config.file=/etc/promtail/config.yaml

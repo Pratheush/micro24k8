@@ -88,6 +88,49 @@
             <version>2.5.0</version>
         </dependency>
 
+        <!--  To send our application logs to Loki, we have to add the below dependency -->
+        <!-- https://mvnrepository.com/artifact/com.github.loki4j/loki-logback-appender -->
+        <dependency>
+            <groupId>com.github.loki4j</groupId>
+            <artifactId>loki-logback-appender</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+
+        <!-- Spring Boot uses Micrometer to collect metrics this dependency configures Micrometer to expose an endpoint that can be scraped by Prometheus.-->
+        <!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <!--<version>1.13.2</version>-->
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- from Spring Boot 3, Spring Cloud Sleuth is no longer needed and spring cloud sleuth is replaced by the Micrometer -->
+        <!-- micrometer-tracing-bridge-brave is the dependency that does all the magic and adds distributed tracing for our application. -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-tracing-bridge-brave</artifactId>
+        </dependency>
+        <!-- zipkin-reporter-brave will export the tracing information to Tempo -->
+        <dependency>
+            <groupId>io.zipkin.reporter2</groupId>
+            <artifactId>zipkin-reporter-brave</artifactId>
+        </dependency>
+
+        <!-- to trace the calls to the database, as we are using Spring Data JDBC -->
+        <!-- https://mvnrepository.com/artifact/net.ttddyy.observation/datasource-micrometer-spring-boot -->
+        <dependency>
+            <groupId>net.ttddyy.observation</groupId>
+            <artifactId>datasource-micrometer-spring-boot</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+
+        <!-- to enable the Aspect Oriented Programming -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
 
     </dependencies>
 

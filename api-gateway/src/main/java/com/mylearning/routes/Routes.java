@@ -19,7 +19,15 @@ import static org.springframework.cloud.gateway.server.mvc.filter.FilterFunction
 import static org.springframework.cloud.gateway.server.mvc.handler.GatewayRouterFunctions.route;
 import static org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions.http;
 
-@Configuration
+/*
+       When you set proxyBeanMethods = false, no proxy methods are created.
+       Each call to a method will create a new instance of the bean, acting just like a factory method.
+
+       In contrast, when proxyBeanMethods is true, Spring intercepts method calls and ensures that the
+       same bean instance is returned for subsequent calls. This behavior is useful for enforcing
+       bean lifecycle behavior, such as returning shared singleton bean instances even when called directly in user code
+ */
+@Configuration(proxyBeanMethods = false)
 @Slf4j
 public class Routes {
 

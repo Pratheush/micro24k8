@@ -25,6 +25,7 @@ public class OrderController {
     public String placeOrder(@RequestBody OrderRequest orderRequest) {
         log.info("OrderController.placeOrder :: {}", orderRequest);
         orderService.placeOrder(orderRequest);
+        //orderService.placeOrderWithObservation(orderRequest); // use when I want to use ProducerRecord and set TraceID into KafkaHeader before sending as Kafka Message
         log.info("OrderController.placeOrder :: order placed Successfully");
         return "Order Placed Successfully";
     }

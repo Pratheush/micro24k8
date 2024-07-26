@@ -48,7 +48,8 @@ public class SecurityConfig {
     // defined a variable with value where we should permit all the requests to these paths.
     // To allow the calls to the downstream microservices, we added the path /aggregate/ that covers
     // the path for all the 3 services:
-    private final String[] freeResourceUrls = {"/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/aggregate/**"};
+    // make sure to add /actuator/prometheus in freeResourceUrls so that this path with this pattern will be permitted without authentication.
+    private final String[] freeResourceUrls = {"/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/aggregate/**","/actuator/prometheus"};
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {

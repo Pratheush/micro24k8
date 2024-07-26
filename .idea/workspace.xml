@@ -5,23 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae595e5-f700-4b14-9099-09eb690cca25" name="Changes" comment="commit untracked changes frod intelij">
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/exception/MyMessagingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/exception/PdfException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/utility/CustomMultipartFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mylearning/config/ObservationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/java/com/mylearning/config/ObservationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/config/ObservationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/config/ObservationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/lrncompletablefuture/CompletableFutureExamples.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/lrncompletablefuture/CompletableFutureExamples1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/lrncompletablefuture/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/aspect/PerformanceTrackerHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/config/ObservationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/logback-spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3bf53ecc442740843266a635cbfe9807b992566" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3bf53ecc442740843266a635cbfe9807b992566" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fcf146007330bb14605a232d25428bbf6aa50b7b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fcf146007330bb14605a232d25428bbf6aa50b7b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/mylearning/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mylearning/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/mylearning/routes/Routes.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/mylearning/routes/Routes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/event/OrderPlacedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/event/OrderPlacedEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/event/OrderPlacedEvent1.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/event/OrderPlacedEvent1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/mylearning/service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/avro/order-placed.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/avro/order-placed.avsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application-gmail.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application-gmail.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/event/OrderPlacedEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/config/RestClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/config/RestClientConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/mylearning/service/OrderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/avro/order-placed.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/avro/order-placed.avsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/order.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/mylearning/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application-dev.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,74 +86,77 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.InventoryServiceApplicationTests.executor": "Coverage",
-    "JUnit.InventoryServiceApplicationTests.shouldReadInventory.executor": "Run",
-    "JUnit.OrderServiceAppTest.executor": "Coverage",
-    "JUnit.OrderServiceAppTesting.executor": "Run",
-    "JUnit.OrderServiceAppTesting.shouldSubmitOrderWithFalseResponseFromInventory.executor": "Run",
-    "JUnit.OrderServiceAppTesting.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock.executor": "Run",
-    "JUnit.OrderServiceApplicationTests.executor": "Run",
-    "JUnit.OrderServiceApplicationTests.placeOrder_ProductNotInStock_ShouldReturnBadRequest.executor": "Run",
-    "JUnit.OrderServiceApplicationTests.placeOrder_ShouldReturnSuccessMessage.executor": "Run",
-    "JUnit.OrderServiceApplicationTests.shouldSubmitOrder.executor": "Run",
-    "JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithFalseResponseFromInventory.executor": "Run",
-    "JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventory.executor": "Run",
-    "JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock.executor": "Run",
-    "JUnit.ProductServiceApplicationTests.executor": "Coverage",
-    "JUnit.ProductServiceApplicationTests.getAllProducts_ShouldReturnAllProducts.executor": "Run",
-    "JUnit.ProductServiceApplicationTests.shouldCreateProduct.executor": "Run",
-    "JUnit.ProductServiceApplicationTests.shouldCreateProduct_24.executor": "Run",
-    "JUnit.ProductServiceApplicationTests.shouldCreateProduct_new.executor": "Run",
-    "JUnit.ProductServiceApplicationTests.shouldGetAllProducts.executor": "Run",
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.my_micro_24_k8 [clean,compile].executor": "Run",
-    "Maven.my_micro_24_k8 [clean].executor": "Run",
-    "Maven.notification-service [clean].executor": "Run",
-    "Maven.notification-service [compile].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "Spring Boot.ApiGatewayApplication.executor": "Run",
-    "Spring Boot.InventoryServiceApplication.executor": "Run",
-    "Spring Boot.NotificationServiceApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication (1).executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
-    "git-widget-placeholder": "gmail-updated",
-    "jdk.selected.JAVA_MODULE": "22",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/jlab/git2024/micro24k8/my_micro_24_k8/notification-service/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3321839",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CompletableFutureExamples.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CompletableFutureExamples1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.InventoryServiceApplicationTests.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.InventoryServiceApplicationTests.shouldReadInventory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceAppTest.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.OrderServiceAppTesting.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceAppTesting.shouldSubmitOrderWithFalseResponseFromInventory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceAppTesting.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceApplicationTests.placeOrder_ProductNotInStock_ShouldReturnBadRequest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceApplicationTests.placeOrder_ShouldReturnSuccessMessage.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceApplicationTests.shouldSubmitOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithFalseResponseFromInventory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventory.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderServiceApplicationTests.shouldSubmitOrderWithTrueResponseFromInventoryUsingWiremock.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceApplicationTests.executor&quot;: &quot;Coverage&quot;,
+    &quot;JUnit.ProductServiceApplicationTests.getAllProducts_ShouldReturnAllProducts.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceApplicationTests.shouldCreateProduct.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceApplicationTests.shouldCreateProduct_24.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceApplicationTests.shouldCreateProduct_new.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProductServiceApplicationTests.shouldGetAllProducts.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.my_micro_24_k8 [clean,compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.my_micro_24_k8 [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.notification-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.notification-service [compile].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.InventoryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.NotificationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;observability&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;22&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/jlab/git2024/micro24k8/my_micro_24_k8/api-gateway/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3321839&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect": [
-      "MySQL"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\api-gateway\src\main\resources" />
+      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\inventory-service\src\main\resources" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\notification-service\src\main\resources" />
+      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\order-service\src\main\resources" />
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\notification-service\src\main\java\com\mylearning\notificationservice" />
-      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\inventory-service\src\main\java\com\mylearning\inventoryservice" />
-      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\order-service\src\main\java\com\mylearning\orderservice" />
-      <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\inventory-service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\order-service\src\main\resources\avro" />
@@ -137,6 +165,7 @@
       <recent name="D:\jlab\git2024\micro24k8\my_micro_24_k8\order-service\src\main\resources\db\migration" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mylearning.config" />
       <recent name="com.mylearning.exception" />
       <recent name="com.mylearning.inventoryservice.config" />
       <recent name="com.mylearning.orderservice.config" />
@@ -158,7 +187,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.NotificationServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.mylearning.ApiGatewayApplication" />
@@ -225,19 +254,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.ProductServiceApplication" />
       <item itemvalue="Spring Boot.InventoryServiceApplication" />
       <item itemvalue="Spring Boot.OrderServiceApplication" />
+      <item itemvalue="Spring Boot.ProductServiceApplication" />
       <item itemvalue="Spring Boot.NotificationServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.NotificationServiceApplication" />
-        <item itemvalue="Spring Boot.ApiGatewayApplication" />
-        <item itemvalue="Spring Boot.InventoryServiceApplication" />
-        <item itemvalue="Spring Boot.OrderServiceApplication" />
         <item itemvalue="Spring Boot.ProductServiceApplication" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
+        <item itemvalue="Spring Boot.NotificationServiceApplication" />
+        <item itemvalue="Spring Boot.OrderServiceApplication" />
+        <item itemvalue="Spring Boot.InventoryServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +303,13 @@
       <workItem from="1720854802203" duration="19896000" />
       <workItem from="1721015085182" duration="7923000" />
       <workItem from="1721130224367" duration="33219000" />
-      <workItem from="1721377924080" duration="26664000" />
+      <workItem from="1721377924080" duration="49425000" />
+      <workItem from="1721550874029" duration="41199000" />
+      <workItem from="1721690899932" duration="4044000" />
+      <workItem from="1721793574095" duration="24707000" />
+      <workItem from="1721949688958" duration="7159000" />
+      <workItem from="1721987052178" duration="20744000" />
+      <workItem from="1722020640866" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="commit untracked changes frod intelij">
       <option name="closed" value="true" />
